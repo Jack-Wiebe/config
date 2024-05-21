@@ -1,0 +1,155 @@
+{
+	"name": "vscode-concourse",
+	"displayName": "Concourse CI Pipeline Editor",
+	"description": "Provides validation and content assist for Concourse CI pipeline and task configuration yml files",
+	"icon": "icon.png",
+	"version": "1.54.0",
+	"publisher": "vmware",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/spring-projects/sts4.git"
+	},
+	"license": "EPL-1.0",
+	"engines": {
+		"npm": ">=6.0.0",
+		"vscode": "^1.75.0"
+	},
+	"categories": [
+		"Programming Languages",
+		"Linters"
+	],
+	"keywords": [
+		"yaml",
+		"concourse",
+		"pipeline.yml"
+	],
+	"activationEvents": [
+		"onLanguage:concourse-pipeline-yaml",
+		"onLanguage:concourse-task-yaml"
+	],
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "Concourse Language Server Options",
+			"properties": {
+				"concourse.ls.logfile": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "The path of a file to write language server logs. If not set or null, then logs are discarded."
+				},
+				"concourse.ls.java.heap": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Passed as an `-Xmx` argument to the language server JVM process"
+				},
+				"concourse.ls.java.home": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Overrides JAVA_HOME used for launching the language server JVM process",
+					"scope": "machine-overridable"
+				},
+				"concourse.ls.java.vmargs": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"description": "Additional 'user defined' VM args to pass to the language server process.",
+					"scope": "machine-overridable"
+				}
+			}
+		},
+		"languages": [
+			{
+				"id": "concourse-pipeline-yaml",
+				"aliases": [
+					"Concourse Pipeline"
+				],
+				"filenamePatterns": [
+					"*pipeline*.yml",
+					"**/pipeline/*.yml",
+					"*pipeline*.yaml",
+					"**/pipeline/*.yaml"
+				],
+				"firstLine": "^#(\\s)*pipeline(\\s)*",
+				"configuration": "./yaml-support/language-configuration.json",
+				"icon": {
+					"light": "./icon-black.svg",
+					"dark": "./icon-white.svg"
+				}
+			},
+			{
+				"id": "concourse-task-yaml",
+				"aliases": [
+					"Concourse Task"
+				],
+				"filenamePatterns": [
+					"**/ci/*task.yml",
+					"**/ci/**/tasks/*.yml",
+					"**/concourse/*task.yml",
+					"**/concourse/**/tasks/*.yml",
+					"**/ci/*task.yaml",
+					"**/ci/**/tasks/*.yaml",
+					"**/concourse/*task.yaml",
+					"**/concourse/**/tasks/*.yaml"
+				],
+				"firstLine": "^#(\\s)*task(\\s)*",
+				"configuration": "./yaml-support/language-configuration.json",
+				"icon": {
+					"light": "./icon-black.svg",
+					"dark": "./icon-white.svg"
+				}
+			}
+		],
+		"grammars": [
+			{
+				"language": "concourse-pipeline-yaml",
+				"scopeName": "source.concourse-yaml",
+				"path": "./yaml-support/concourse-yaml.tmLanguage.json"
+			},
+			{
+				"language": "concourse-task-yaml",
+				"scopeName": "source.concourse-yaml",
+				"path": "./yaml-support/concourse-yaml.tmLanguage.json"
+			}
+		]
+	},
+	"main": "./out/lib/Main",
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"clean": "rm -fr node_modules out *.vsix package-lock.json",
+		"vsce-package": "vsce package",
+		"vsce-pre-release-package": "vsce package --pre-release"
+	},
+	"dependencies": {
+		"@pivotal-tools/commons-vscode": "file:../commons-vscode/pivotal-tools-commons-vscode-0.2.4.tgz",
+		"vscode-languageclient": "^9.0.1"
+	},
+	"devDependencies": {
+		"@types/node": "^18.8.0",
+		"@types/vscode": "1.75.0",
+		"@vscode/vsce": "^2.22.0",
+		"typescript": "^4.8.0"
+	},
+	"__metadata": {
+		"id": "8e8d8573-d69a-4c7b-a951-d72a266a5822",
+		"publisherId": "112d503b-5035-4139-967b-ed70bf3a7df0",
+		"publisherDisplayName": "VMware",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": true,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1714656190538,
+		"pinned": false,
+		"preRelease": false,
+		"source": "gallery"
+	}
+}

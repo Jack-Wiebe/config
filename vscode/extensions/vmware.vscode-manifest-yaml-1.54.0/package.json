@@ -1,0 +1,118 @@
+{
+	"name": "vscode-manifest-yaml",
+	"displayName": "Cloudfoundry Manifest YML Support",
+	"description": "Adds linting, content assist and hoverinfo's for Cloudfoundry Deployment Manifests (a.k.a. `manifest.yml`) files.",
+	"icon": "icon.png",
+	"version": "1.54.0",
+	"publisher": "vmware",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/spring-projects/sts4.git"
+	},
+	"license": "EPL-1.0",
+	"engines": {
+		"npm": ">=6.0.0",
+		"vscode": "^1.75.0"
+	},
+	"categories": [
+		"Programming Languages",
+		"Linters"
+	],
+	"keywords": [
+		"yaml",
+		"cloudfoundry",
+		"manifest.yml"
+	],
+	"activationEvents": [
+		"onLanguage:manifest-yaml"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "manifest-yaml",
+				"aliases": [
+					"cloudfoundry-manifest"
+				],
+				"filenamePatterns": [
+					"*manifest*.yml"
+				],
+				"configuration": "./yaml-support/language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "manifest-yaml",
+				"scopeName": "source.manifest-yaml",
+				"path": "./yaml-support/manifest-yaml.tmLanguage.json"
+			}
+		],
+		"configuration": {
+			"title": "Cloudfoundry Manifest Language Server Configuration",
+			"properties": {
+				"cloudfoundry-manifest.ls.logfile": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "The path of a file to write language server logs. If not set or null, then logs are discarded."
+				},
+				"cloudfoundry-manifest.ls.java.heap": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Passed as an `-Xmx` argument to the language server JVM process"
+				},
+				"cloudfoundry-manifest.ls.java.home": {
+					"type": [
+						"string",
+						"null"
+					],
+					"description": "Overrides JAVA_HOME used for launching the language server JVM process",
+					"scope": "machine-overridable"
+				},
+				"cloudfoundry-manifest.ls.java.vmargs": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"description": "Additional 'user defined' VM args to pass to the language server process.",
+					"scope": "machine-overridable"
+				}
+			}
+		}
+	},
+	"main": "./out/lib/Main",
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"clean": "rm -fr node_modules out *.vsix package-lock.json",
+		"vsce-package": "vsce package",
+		"vsce-pre-release-package": "vsce package --pre-release"
+	},
+	"dependencies": {
+		"@pivotal-tools/commons-vscode": "file:../commons-vscode/pivotal-tools-commons-vscode-0.2.4.tgz",
+		"vscode-languageclient": "^9.0.1"
+	},
+	"devDependencies": {
+		"@types/node": "^18.8.0",
+		"@types/vscode": "1.75.0",
+		"@vscode/vsce": "^2.22.0",
+		"typescript": "^4.8.0"
+	},
+	"__metadata": {
+		"id": "af0200e9-cbe3-40af-8240-6cae77d3aebb",
+		"publisherId": "112d503b-5035-4139-967b-ed70bf3a7df0",
+		"publisherDisplayName": "VMware",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": true,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1714656190474,
+		"pinned": false,
+		"preRelease": false,
+		"source": "gallery"
+	}
+}
