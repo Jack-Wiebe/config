@@ -5,13 +5,6 @@
       "alignment": "left",
       "segments": [
         {
-          "background": "#000000",
-          "foreground": "#dd1e1e",
-          "style": "plain",
-          "template": " \u26a1",
-          "type": "root"
-        },
-        {
           "background": "transparent",
           "foreground": "#ffffff",
           "properties": {
@@ -35,6 +28,13 @@
           "style": "plain",
           "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
           "type": "os"
+        },
+        {
+          "background": "transparent",
+          "foreground": "#dd1e1e",
+          "style": "plain",
+          "template": " \u26a1",
+          "type": "root"
         },
         {
           "background": "#272727",
@@ -126,13 +126,16 @@
           },
           "style": "diamond",
           "template": "{{ .FormattedMs }} ",
+          "trailing_diamond": "\ue0b4",
           "type": "executiontime"
         },
         {
+          "leading_diamond": "\ue0b6",
           "background": "#ffffff",
           "foreground": "#3c3c3c",
-          "style": "plain",
+          "style": "diamond",
           "template": " {{ round .PhysicalPercentUsed .Precision }}% ",
+          "trailing_diamond": "\ue0b4",
           "type": "sysinfo"
         },
         {
@@ -155,10 +158,10 @@
           "type": "battery"
         },
         {
-          "background": "#000000",
-          "foreground": "lightGreen",
+          "background": "transparent",
+          "foreground": "#3EC669",
           "style": "plain",
-          "template": "{{ .CurrentDate | date .Format }}",
+          "template": " {{ .CurrentDate | date .Format }}",
           "type": "time"
         }
       ],
