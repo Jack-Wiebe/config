@@ -1,1 +1,0 @@
-*Optional.* Array continuing strings that *MUST* be included in commit messages for the commit to not be skipped

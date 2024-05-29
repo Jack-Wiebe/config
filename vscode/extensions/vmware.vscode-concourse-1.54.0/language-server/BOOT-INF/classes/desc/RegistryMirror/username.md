@@ -1,1 +1,0 @@
-A username to use when authenticating to the mirror.

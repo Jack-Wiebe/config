@@ -1,1 +1,0 @@
-*Optional*. If specified overides the default commit message with the one provided. The user can use `%version%` and `%file%` to get them replaced automatically with the correct values.

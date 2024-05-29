@@ -1,1 +1,0 @@
-*Optional.* If the proxy requires authentication, use this username

@@ -1,1 +1,0 @@
-*Optional.* A valid AWS session token.

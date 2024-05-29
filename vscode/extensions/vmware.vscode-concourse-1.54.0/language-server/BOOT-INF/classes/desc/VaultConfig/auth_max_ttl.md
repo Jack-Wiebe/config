@@ -1,1 +1,0 @@
-*Optional.* Maximum duration to elapse before forcing the client to log in again.

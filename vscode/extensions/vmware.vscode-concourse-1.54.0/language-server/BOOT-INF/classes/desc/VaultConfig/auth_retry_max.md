@@ -1,1 +1,0 @@
-*Optional.* When failing to authenticate, give up after this amount of time.

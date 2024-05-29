@@ -1,1 +1,0 @@
-*Optional*. Enables setting User in the ssh config.

@@ -1,1 +1,0 @@
-*Optional.* The base path used when attempting to locate a pipeline-level secret.

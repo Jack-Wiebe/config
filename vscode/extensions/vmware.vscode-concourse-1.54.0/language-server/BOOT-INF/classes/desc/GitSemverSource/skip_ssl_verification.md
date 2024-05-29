@@ -1,1 +1,0 @@
-*Optional*. Skip SSL verification for git endpoint. Useful for git compatible providers using self-signed SSL certificates.

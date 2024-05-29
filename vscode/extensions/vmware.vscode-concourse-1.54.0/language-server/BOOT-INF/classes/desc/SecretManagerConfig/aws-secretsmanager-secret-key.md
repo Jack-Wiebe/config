@@ -1,1 +1,0 @@
-*Optional.* The secret key that corresponds to the access key defined above.

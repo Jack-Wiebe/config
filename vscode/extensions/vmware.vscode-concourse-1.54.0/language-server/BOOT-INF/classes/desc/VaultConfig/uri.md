@@ -1,1 +1,0 @@
-*Required.* The URL of the Vault API.

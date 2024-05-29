@@ -1,1 +1,0 @@
-*Optional.* The number of versions to return when performing a check

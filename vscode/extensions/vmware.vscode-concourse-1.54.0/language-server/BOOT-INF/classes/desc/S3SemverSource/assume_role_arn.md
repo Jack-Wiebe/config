@@ -1,1 +1,0 @@
-*Optional.* The AWS role to assume when using access keys.

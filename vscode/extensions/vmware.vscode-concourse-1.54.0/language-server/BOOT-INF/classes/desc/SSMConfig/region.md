@@ -1,1 +1,0 @@
-*Required.* The AWS region to read secrets from.

@@ -1,1 +1,0 @@
-*Optional.* If a positive integer is given, shallow clone the repository using the `--depth` option.

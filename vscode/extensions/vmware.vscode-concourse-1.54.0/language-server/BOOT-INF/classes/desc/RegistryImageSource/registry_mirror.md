@@ -1,1 +1,0 @@
-*Optional.* Hostname and credentials pointing to a docker registry mirror service.

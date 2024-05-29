@@ -1,1 +1,0 @@
-*Required.* The AWS region that requests to Secrets Manager will be sent to.

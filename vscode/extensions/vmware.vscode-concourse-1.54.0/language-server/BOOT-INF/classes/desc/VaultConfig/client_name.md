@@ -1,1 +1,0 @@
-*Optional.* The expected name of the server when connecting through TLS.
