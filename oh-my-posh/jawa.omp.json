@@ -135,7 +135,7 @@
           "foreground": "#3c3c3c",
           "style": "diamond",
           "template": " {{ round .PhysicalPercentUsed .Precision }}% ",
-          //"trailing_diamond": "\ue0b4",
+          //"trailing_diamond": "\ue0b4" //remove comment for laptop profile
           "type": "sysinfo"
         },
         {
@@ -155,7 +155,7 @@
           },
           "style": "diamond",
           "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}\uf295 </>",
-		  "trailing_diamond": "\ue0b4",
+          "trailing_diamond": "\ue0b4",
           "type": "battery"
         },
         {
