@@ -135,7 +135,7 @@
           "foreground": "#3c3c3c",
           "style": "diamond",
           "template": " {{ round .PhysicalPercentUsed .Precision }}% ",
-          "trailing_diamond": "\ue0b4",
+          //"trailing_diamond": "\ue0b4",
           "type": "sysinfo"
         },
         {
@@ -153,8 +153,9 @@
             "charging_icon": "\uf1e6 ",
             "discharging_icon": "\ue234 "
           },
-          "style": "plain",
-          "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}\uf295 <#262626>\ue0b2</>",
+          "style": "diamond",
+          "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}\uf295 </>",
+		  "trailing_diamond": "\ue0b4",
           "type": "battery"
         },
         {
