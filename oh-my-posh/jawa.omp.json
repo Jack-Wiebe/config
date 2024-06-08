@@ -70,21 +70,30 @@
           }
         },
         {
+          "foreground": "#8377f7",
+          "background": "#000000",
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "trailing_diamond": "\ue0b4",
+          "template": "  {{ .Full }} ",
+          "type": "node"
+        },
+        {
           "background": "#306998",
           "foreground": "#FFE873",
           "leading_diamond": "\ue0b6",
           "style": "diamond",
-          "template": "\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}",
           "trailing_diamond": "\ue0b4 ",
+          "template": "\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .cd .. }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}",
           "type": "python"
         },
         {
           "background": "#ffffff",
-          "foreground": "#06aad5",
+          "foreground": "#085ece",
           "leading_diamond": "\ue0b6",
           "style": "diamond",
-          "template": "\ue626 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
           "trailing_diamond": "\ue0b4 ",
+          "template": "\ue626 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
           "type": "go"
         },
         {
@@ -92,25 +101,25 @@
           "foreground": "#faa029",
           "leading_diamond": "\ue0b6",
           "style": "diamond",
-          "template": "\ue7ad {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
           "trailing_diamond": "\ue0b4 ",
+          "template": "\ue7ad {{.Profile}}{{if .Region}}@{{.Region}}{{end}}",
           "type": "aws"
         },
         {
-          "type": "terraform",
           "style": "powerline",
           "powerline_symbol": "\uE0B0",
           "foreground": "#000000",
           "background": "#ebcc34",
-          "template": "{{.WorkspaceName}}"
+          "template": "{{.WorkspaceName}}",
+          "type": "terraform"
         },
         {
           "background": "#316ce4",
           "foreground": "#ffffff",
           "leading_diamond": "\ue0b6",
           "style": "diamond",
-          "template": "\uf308 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}",
           "trailing_diamond": "\ue0b4",
+          "template": "\uf308 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}",
           "type": "kubectl"
         }
       ],
@@ -135,7 +144,7 @@
           "foreground": "#3c3c3c",
           "style": "diamond",
           "template": " {{ round .PhysicalPercentUsed .Precision }}% ",
-          //"trailing_diamond": "\ue0b4" //remove comment for laptop profile
+          "trailing_diamond": "\ue0b4",
           "type": "sysinfo"
         },
         {
@@ -191,6 +200,17 @@
       "type": "prompt"
     }
   ],
+  "transient_prompt": {
+    "segments": [
+      {
+        "foreground": "#ecf7fa",
+        "template": "\ue285 "
+      }
+    ],
+    "foreground": "#00ff0d",
+    "background": "transparent",
+    "template": "<#ecf7fa>\u22C9</>\ue285 "
+  },
   "pwd": "osc99",
   "version": 2
 }
