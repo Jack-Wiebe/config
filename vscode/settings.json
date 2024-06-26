@@ -1,4 +1,52 @@
 {
+  // open json editor for settings
+  "workbench.settings.editor": "json",
+  "workbench.iconTheme": "moxer-icons",
+
+  // Change font
+  "editor.fontFamily": "Fira Code Nerd Font",
+  "scm.inputFontFamily": "Fira Code Nerd Font",
+  "terminal.integrated.fontFamily": "Fira Code Nerd Font",
+  "chat.editor.fontFamily": "Fira Code Nerd Font",
+  "debug.console.fontFamily": "Fira Code Nerd Font",
+  "editor.codeLensFontFamily": "Fira Code Nerd Font",
+  "notebook.output.fontFamily": "Fira Code Nerd Font",
+  "markdown.preview.fontFamily": "Fira Code Nerd Font",
+  "editor.inlayHints.fontFamily": "Fira Code Nerd Font",
+
+  // Font size
+  "editor.fontSize": 14,
+  "terminal.integrated.fontSize": 14,
+
+  // Aura theme customisation
+  "workbench.colorCustomizations": {
+    "[Aura Dark]": {
+      "editor.background": "#110f17",
+      "terminal.background": "#110f17",
+      "activityBar.background": "#110f17",
+      "statusBar.background": "#110f17",
+      "editorGroupHeader.tabsBackground": "#110f17",
+      "tab.inactiveBackground": "#110f17"
+    }
+  },
+
+  // Misc
+  "workbench.startupEditor": "none",
+  "explorer.compactFolders": false,
+  "editor.tabSize": 2,
+  "editor.linkedEditing": true,
+  "breadcrumbs.filePath": "on",
+  "files.trimTrailingWhitespace": true,
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "window.zoomLevel": 0.75,
+  "workbench.sideBar.location": "right",
+  "workbench.colorTheme": "Aura Soft Dark",
+  "terminal.integrated.env.windows": {},
+  "console-ninja.featureSet": "Community",
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "files.exclude": {
@@ -22,6 +70,5 @@
   "explorer.confirmDelete": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "workbench.sideBar.location": "right",
   "json.format.enable": false
 }
