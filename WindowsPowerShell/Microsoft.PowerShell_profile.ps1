@@ -16,3 +16,12 @@ function gitx {
 	gitr
 	gits	
 }
+
+function gitrf {
+	param(
+		[string]$file = ""
+	)
+	
+	git checkout HEAD -- $file
+	gits
+}
