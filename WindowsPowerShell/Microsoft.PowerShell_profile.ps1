@@ -14,14 +14,14 @@ Function gitd { git diff }
 function gitx {
 	gitc
 	gitr
-	gits	
+	gits
 }
 
 function gitrf {
 	param(
 		[string]$file = ""
 	)
-	
+
 	git checkout HEAD -- $file
 	gits
 }
