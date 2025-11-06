@@ -17,7 +17,7 @@ function gitx {
 	gits
 }
 
-function gitrf {
+function gitrm {
 	param(
 		[string]$file = ""
 	)
@@ -25,6 +25,7 @@ function gitrf {
 	git checkout HEAD -- $file
 	gits
 }
+
 function mkcd {
 
 	param (
@@ -41,3 +42,8 @@ function mkcd {
 	}
 
 }
+
+function .. { Set-Location .. }
+function ... { Set-Location ../.. }
+function .... { Set-Location ../../.. }
+function ..... { Set-Location ../../../.. }
