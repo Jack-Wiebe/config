@@ -25,3 +25,19 @@ function gitrf {
 	git checkout HEAD -- $file
 	gits
 }
+function mkcd {
+
+	param (
+			[string]$directory
+	)
+
+	if (-not $directory) {
+			Write-Output "Enter a directory name"
+	} elseif (Test-Path -Path $directory -PathType Container) {
+			Write-Output "`"$directory`" already exists"
+	} else {
+			New-Item -ItemType Directory -Path $directory | Out-Null
+			Set-Location -Path $directory
+	}
+
+}
